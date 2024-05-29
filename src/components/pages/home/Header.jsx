@@ -4,11 +4,11 @@ import '../../../css/header.css'
 export const Header = () => {
   return (
     <header>
-      <div className="flex">
+      <div className="header">
         <div>
-          <h1 className="home__title">Home</h1>
-          <ul className="flex">
-            <li>For you</li>
+          <h1 className="header__title">Home</h1>
+          <ul className="header__list">
+            <li className="active">For you</li>
             <li>e-Books</li>
           </ul>
         </div>
