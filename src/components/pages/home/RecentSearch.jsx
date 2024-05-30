@@ -30,6 +30,51 @@ export const RecentSearch = () => {
             </div>
           </div>
         </div>
+        <div className="recent__elem">
+          <div className="recent__image">
+            <img src={image1} alt="" />
+          </div>
+          <div className="recent__name">To Kill A Mockingbird</div>
+          <div className="flex recent__info">
+            <div className="recent__price">Free</div>
+            <div className="flex recent__rating">
+              <div className="recent__star">
+                <img src={star} alt="" />
+              </div>
+              {rating}
+            </div>
+          </div>
+        </div>
+        <div className="recent__elem">
+          <div className="recent__image">
+            <img src={image1} alt="" />
+          </div>
+          <div className="recent__name">To Kill A Mockingbird</div>
+          <div className="flex recent__info">
+            <div className="recent__price">Free</div>
+            <div className="flex recent__rating">
+              <div className="recent__star">
+                <img src={star} alt="" />
+              </div>
+              {rating}
+            </div>
+          </div>
+        </div>
+        <div className="recent__elem">
+          <div className="recent__image">
+            <img src={image1} alt="" />
+          </div>
+          <div className="recent__name">To Kill A Mockingbird</div>
+          <div className="flex recent__info">
+            <div className="recent__price">Free</div>
+            <div className="flex recent__rating">
+              <div className="recent__star">
+                <img src={star} alt="" />
+              </div>
+              {rating}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

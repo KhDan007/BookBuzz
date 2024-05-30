@@ -198,15 +198,35 @@ body {
 .recent__more:hover {
   text-decoration: underline;
 }
+.recent__items {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Ensures smooth scrolling on iOS */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.recent__items::webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, and Opera */
+}
 .recent__elem {
+  cursor: pointer;
   max-width: 120px;
   text-align: center;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  /* Space between items */
 }
 .recent__name {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
+}
+.recent__price {
+  font-weight: 600;
+  color: #4074D8;
 }
 .recent__info {
-  font-size: 12px;
+  font-size: 14px;
   justify-content: space-between;
 }
