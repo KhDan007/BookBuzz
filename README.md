@@ -1,4 +1,5 @@
 # BookBuzz
+I didn't finish it, I decided to apply next year to get a scholarship 100%. Also I have exams now so I should probably focus on them rn. Good Luck!
 
 Welcome to **BookBuzz**, the ultimate web application for book enthusiasts to read, publish, and discuss book reviews. Whether you're an avid reader eager to share your insights or on the hunt for your next favorite book, BookBuzz is the perfect platform for you. Join our vibrant community to connect with fellow book lovers, discover new titles, and participate in engaging discussions.
 
