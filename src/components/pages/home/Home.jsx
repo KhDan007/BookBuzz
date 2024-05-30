@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import '../../../css/home.css'
-import { Header } from "./Header"
-import { MySlider } from './MySlider'
-import { RecentSearch } from './RecentSearch'
-import { Arrivals } from './Arrivals'
-import { BestSellers } from './BestSellers'
-
-
+import { useState } from "react";
+import "../../../css/home.css";
+import { Header } from "./Header";
+import { MySlider } from "./MySlider";
+import { RecentSearch } from "./RecentSearch";
+import { Arrivals } from "./Arrivals";
+import { BestSellers } from "./BestSellers";
+import { Footer } from "../../Footer";
 
 export const Home = () => {
-  const [activeTab, setActiveTab] = useState('forYou');
+  const [activeTab, setActiveTab] = useState("forYou");
   const [isSearched, setIsSearched] = useState(true);
-  
+
   const renderContent = () => {
-    if (activeTab === 'forYou') {
+    if (activeTab === "forYou") {
       return (
         <>
           <MySlider />
@@ -22,15 +21,21 @@ export const Home = () => {
           <BestSellers />
         </>
       );
-    } else if (activeTab === 'eBooks') {
+    } else if (activeTab === "eBooks") {
       // Add content for e-Books tab here
-      return <div>e-Books content goes here</div>;
+      return (
+        <>
+        Ebooks
+        </>
+      );
     }
   };
 
-  return <div className="home">
-    <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-    
-    {renderContent()}
-  </div>
-}
+  return (
+    <div className="home">
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+
+      {renderContent()}
+    </div>
+  );
+};
