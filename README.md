@@ -3,6 +3,7 @@
 Welcome to **BookBuzz**, the ultimate web application for book enthusiasts to read, publish, and discuss book reviews. Whether you're an avid reader eager to share your insights or on the hunt for your next favorite book, BookBuzz is the perfect platform for you. Join our vibrant community to connect with fellow book lovers, discover new titles, and participate in engaging discussions.
 
 Available at: https://KhDan007.github.io/BookBuzz
+(Unfortunately, the responsiveness of this website is not completely ready, due to lack of time, so I ask you to use **360px** width in the developer's tools)
 
 ## Features
 
