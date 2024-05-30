@@ -1,5 +1,4 @@
 import search from "../../../img/icons/search.svg";
-import '../../../css/header.css'
 
 export const Header = () => {
   return (
@@ -12,10 +11,13 @@ export const Header = () => {
             <li>e-Books</li>
           </ul>
         </div>
-        <div>
+        <div className="header__search">
           <div className="header__image">
             <img src={search} alt="" />
           </div>
+        </div>
+        <div className="header__image2">
+          <img src={search} alt="" />
         </div>
       </div>
     </header>
