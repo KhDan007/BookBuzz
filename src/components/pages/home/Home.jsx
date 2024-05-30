@@ -9,15 +9,28 @@ import { BestSellers } from './BestSellers'
 
 
 export const Home = () => {
-
+  const [activeTab, setActiveTab] = useState('forYou');
   const [isSearched, setIsSearched] = useState(true);
   
-  return <div className="home">
-    <Header />
-    <MySlider />
+  const renderContent = () => {
+    if (activeTab === 'forYou') {
+      return (
+        <>
+          <MySlider />
+          {isSearched && <RecentSearch />}
+          <Arrivals />
+          <BestSellers />
+        </>
+      );
+    } else if (activeTab === 'eBooks') {
+      // Add content for e-Books tab here
+      return <div>e-Books content goes here</div>;
+    }
+  };
 
-    {isSearched ? <RecentSearch /> : ""}
-    <Arrivals />
-    <BestSellers />
+  return <div className="home">
+    <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+    
+    {renderContent()}
   </div>
 }

@@ -27,12 +27,15 @@ body {
 }
 .header li {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 6px 12px 6px 0;
   font-weight: 600;
   font-size: 16px;
   color: #4074D8;
+  cursor: pointer;
 }
 .header li.active {
+  padding-left: 12px;
+  margin-right: 12px;
   color: #fff;
   background-color: #4074D8;
   border-radius: 12px;
@@ -52,6 +55,7 @@ body {
   display: none;
 }
 .header__image2 {
+  cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
