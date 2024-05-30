@@ -163,17 +163,17 @@ body {
   /* Active background color */
 }
 
-.recent {
+.recent, .arrivals {
   padding-bottom: 16px;
 }
-.recent__subtitle {
+.recent__subtitle, .arrivals__subtitle {
   font-size: 12px;
   color: #121212;
   font-weight: 400;
   margin: 0;
   margin-bottom: 8px;
 }
-.recent__title {
+.recent__title, .arrivals__title {
   text-overflow: ellipsis;
   max-width: 236px;
   font-size: 16px;
@@ -184,21 +184,21 @@ body {
   white-space: nowrap;
   margin: 0;
 }
-.recent__head {
+.recent__head, .arrivals__head {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 18px;
 }
-.recent__more {
+.recent__more, .arrivals__more {
   font-size: 14px;
   color: #4074D8;
   font-weight: 600;
   cursor: pointer;
 }
-.recent__more:hover {
+.recent__more:hover, .arrivals__more:hover {
   text-decoration: underline;
 }
-.recent__items {
+.recent__items, .arrivals__items {
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -206,11 +206,11 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
-.recent__items::webkit-scrollbar {
+.recent__items::webkit-scrollbar, .arrivals__items::webkit-scrollbar {
   display: none;
   /* Chrome, Safari, and Opera */
 }
-.recent__elem {
+.recent__elem, .arrivals__elem {
   cursor: pointer;
   max-width: 120px;
   text-align: center;
@@ -218,15 +218,15 @@ body {
   margin-right: 10px;
   /* Space between items */
 }
-.recent__name {
+.recent__name, .arrivals__name {
   font-weight: 600;
   font-size: 15px;
 }
-.recent__price {
+.recent__price, .arrivals__price {
   font-weight: 600;
   color: #4074D8;
 }
-.recent__info {
+.recent__info, .arrivals__info {
   font-size: 14px;
   justify-content: space-between;
 }

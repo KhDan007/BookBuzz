@@ -3,6 +3,7 @@ import '../../../css/home.css'
 import { Header } from "./Header"
 import { MySlider } from './MySlider'
 import { RecentSearch } from './RecentSearch'
+import { Arrivals } from './Arrivals'
 
 
 
@@ -15,5 +16,6 @@ export const Home = () => {
     <MySlider />
 
     {isSearched ? <RecentSearch /> : ""}
+    <Arrivals />
   </div>
 }
