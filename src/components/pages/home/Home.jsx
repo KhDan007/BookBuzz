@@ -4,6 +4,7 @@ import { Header } from "./Header"
 import { MySlider } from './MySlider'
 import { RecentSearch } from './RecentSearch'
 import { Arrivals } from './Arrivals'
+import { BestSellers } from './BestSellers'
 
 
 
@@ -17,5 +18,6 @@ export const Home = () => {
 
     {isSearched ? <RecentSearch /> : ""}
     <Arrivals />
+    <BestSellers />
   </div>
 }
