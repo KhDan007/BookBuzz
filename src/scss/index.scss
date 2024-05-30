@@ -55,7 +55,9 @@ ol {
     align-items: center;
   }
 
-  &__text {
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
     font-size: 14px;
   }
 }

@@ -22,16 +22,7 @@ export const MySlider = () => {
   const [settings, setSettings] = useState(defaultSettings)
   const [progress, setProgress] = useState(0);
 
-  const updateSettings = () => {
-    if (window.innerWidth > 576) {
-      setSettings({ ...defaultSettings, slidesToShow: 2 });
-    } else {
-      setSettings(defaultSettings);
-    }
-  };
-
   useEffect(() => {
-    updateSettings()
 
     const interval = setInterval(() => {
       setProgress((prevProgress) =>

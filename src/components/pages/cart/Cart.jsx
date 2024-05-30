@@ -1,5 +1,9 @@
+import { Footer } from "./Footer"
+
 export const Cart = () => {
   return <div>
-    This is this cart page
+    
+
+    <Footer />
   </div>
 }

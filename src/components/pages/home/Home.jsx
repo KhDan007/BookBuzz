@@ -5,8 +5,8 @@ import { MySlider } from "./MySlider";
 import { RecentSearch } from "./RecentSearch";
 import { Arrivals } from "./Arrivals";
 import { BestSellers } from "./BestSellers";
-import { Footer } from "../../Footer";
 import { EBooks } from "./EBooks";
+import { Footer } from "./Footer";
 
 export const Home = () => {
   const [activeTab, setActiveTab] = useState("forYou");
@@ -20,6 +20,7 @@ export const Home = () => {
           {isSearched && <RecentSearch />}
           <Arrivals />
           <BestSellers />
+          <Footer />
         </>
       );
     } else if (activeTab === "eBooks") {
@@ -27,6 +28,7 @@ export const Home = () => {
       return (
         <>
           <EBooks />
+          <Footer />
         </>
       );
     }
