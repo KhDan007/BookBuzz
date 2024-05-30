@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import search from "../../../img/icons/search.svg";
 
 export const Header = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
+
   return (
     <header>
       <div className="header">
@@ -21,12 +24,12 @@ export const Header = ({ activeTab, setActiveTab }) => {
             </li>
           </ul>
         </div>
-        <div className="header__search">
+        {/* <button className="header__search">
           <div className="header__image">
             <img src={search} alt="search icon" />
           </div>
-        </div>
-        <div className="header__image2">
+        </button> */}
+        <div onClick={() => navigate('/search')} className="header__image2">
           <img src={search} alt="search icon" />
         </div>
       </div>
