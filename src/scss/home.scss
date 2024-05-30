@@ -1,7 +1,18 @@
 @import 'variables';
 
+body {
+  padding-top: 100px;
+}
+
 .header {
-  padding: 20px 20px 8px;
+  z-index: 100;
+  height: 100px;
+  background-color: #E4DDE7;
+  padding: 20px 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -53,10 +64,21 @@
     flex-flow: row nowrap;
     align-items: center;
   }
+
+  @media (min-width: $xs) {
+    .header__search {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  
+    .header__image2 {
+      display: none;
+    }
+  }
 }
 
 .slider {
-  padding: 16px 40px 28px;
+  padding: 16px 30px 28px;
 
   &__image {
     display: flex;
@@ -66,7 +88,7 @@
   }
 
   &__block {
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     position: relative;
     display: flex !important;
     flex-flow: row nowrap;
@@ -82,9 +104,9 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 16px;
-    background-color: #fff;
+    background-color: #EFEBF1;
     border-radius: 8px;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     z-index: 10;
     position: absolute;
@@ -103,23 +125,26 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    width: 64px;
   }
 
   &__col {
+    padding-left: 16px;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
   }
 
   &__title {
-    max-width: 85%;
+    max-width: 100%;
     margin: 0 auto;
     font-size: 18px;
     font-weight: 600;
   }
 
   .progress-bar-container {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     background-color: rgba(64, 117, 216, 0.16);
     border-radius: 25px;
@@ -138,7 +163,7 @@
     position: absolute;
     left: 50%;
     translate: -50% 0;
-    bottom: 200px;
+    bottom: 150px;
     display: flex;
     justify-content: center;
     list-style: none;
@@ -161,48 +186,93 @@
     /* Active background color */
   }
   
-  @media (min-width: 430px) {
-    .slider__col {
-      padding: 20px 0;
-    }
+  // @media (min-width: 430px) {
+  //   .slider__col {
+  //     padding: 20px 0;
+  //   }
 
-    .slider__progress-text {
-      font-size: 12px;
-    }
+  //   .slider__progress-text {
+  //     font-size: 12px;
+  //   }
 
-    .slider__block {
-      padding-bottom: 230px;
-    }
-    .custom-dots {
-      bottom: 230px;
+  //   .slider__block {
+  //     padding-bottom: 230px;
+  //   }
+  //   .custom-dots {
+  //     bottom: 230px;
+  //   }
+  // }
+
+  // @media (min-width: 500px) {
+  //   .slider__col {
+  //     padding: 30px 0;
+  //   }
+
+  //   .slider__progress-text {
+  //     font-size: 14px;
+  //   }
+
+  //   .slider__block {
+  //     padding-bottom: 260px;
+  //   }
+  //   .custom-dots {
+  //     bottom: 260px;
+  //   }
+  // }
+}
+
+.recent {
+  padding-bottom: 16px;
+  &__subtitle {
+    font-size: 12px;
+    color: #121212;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    max-width: 236px; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  &__head {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__more {
+    font-size: 14px;
+    color: #4074D8;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
-  @media (min-width: 500px) {
-    .slider__col {
-      padding: 30px 0;
-    }
+  &__elem {
+    max-width: 120px;
+    text-align: center;
+  }
 
-    .slider__progress-text {
-      font-size: 14px;
-    }
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+  }
 
-    .slider__block {
-      padding-bottom: 260px;
-    }
-    .custom-dots {
-      bottom: 260px;
-    }
+  &__info {
+    font-size: 12px;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: $xs) {
-  .header__search {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-
-  .header__image2 {
-    display: none;
-  }
-}
