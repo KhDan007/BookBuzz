@@ -4,7 +4,7 @@ import { Home } from "./components/pages/home/Home";
 import { Library } from "./components/pages/library/Library";
 import { Profile } from "./components/pages/profile/Profile";
 import { Cart } from "./components/pages/cart/Cart";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { useState } from "react";
 import { Search } from "./components/Search";
 
