@@ -309,6 +309,17 @@ body {
 .ebooks {
   &__filters {
     margin-bottom: 20px;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Ensures smooth scrolling on iOS */
+    scrollbar-width: none;
+    /* Firefox */
+
+    &::webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, and Opera */
+    }
   }
 
   &__content {
@@ -363,12 +374,13 @@ body {
     border-radius: 12px;
     color: #4074D8;
     font-weight: 600;
-    padding: 6px 16px 6px 24px;
+    padding: 6px 0px 6px 8px;
     border: 1px solid #4074D8;
     background-color: #ffffff00;
     font-size: 14px;
+    margin-right: 10px;
 
-  
+
     &:focus {
       outline: none;
       border: 1px solid #4074D8;

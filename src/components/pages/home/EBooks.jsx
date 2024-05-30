@@ -4,6 +4,7 @@ import star from "../../../img/icons/star.svg";
 
 export const EBooks = () => {
   const [sortBy, setSortBy] = useState("");
+  const [filters, setFilters] = useState({ genre: "", language: "" });
   const [data, setData] = useState([
     {
       id: 1,
@@ -11,7 +12,8 @@ export const EBooks = () => {
       price: 1,
       author: "Marlon James",
       rating: 4.5,
-      category: "A",
+      genre: "sci-fi",
+      language: "russian",
     },
     {
       id: 2,
@@ -19,7 +21,8 @@ export const EBooks = () => {
       price: 4,
       author: "Marlon James",
       rating: 4.5,
-      category: "B",
+      genre: "fiction",
+      language: "english",
     },
     {
       id: 3,
@@ -27,7 +30,8 @@ export const EBooks = () => {
       price: 2,
       author: "Marlon James",
       rating: 4.5,
-      category: "A",
+      genre: "fiction",
+      language: "japanese",
     },
     {
       id: 4,
@@ -35,7 +39,8 @@ export const EBooks = () => {
       price: 0,
       author: "Marlon James",
       rating: 4.5,
-      category: "A",
+      genre: "fiction",
+      language: "english",
     },
   ]);
 
@@ -54,11 +59,26 @@ export const EBooks = () => {
     }
   };
 
+  const filterData = (data, filters) => {
+    return data.filter((item) => {
+      return (
+        (filters.genre ? item.genre === filters.genre : true) &&
+        (filters.language ? item.language === filters.language : true)
+      );
+    });
+  };
+
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters({ ...filters, [name]: value });
+  };
+
   const handleSortChange = (criteria) => {
     setSortBy(criteria);
   };
 
-  const sortedData = sortData(data, sortBy);
+  const filteredData = filterData(data, filters);
+  const sortedData = sortData(filteredData, sortBy);
 
   return (
     <div className="ebooks container">
@@ -73,6 +93,27 @@ export const EBooks = () => {
           <option value="rating">Rating</option>
           <option value="price">Price</option>
           <option value="author">Author</option>
+        </select>
+        <select
+          className="ebooks__select"
+          name="genre"
+          value={filters.genre}
+          onChange={handleFilterChange}
+        >
+          <option value="">All Genres</option>
+          <option value="sci-fi">Sci-fi</option>
+          <option value="fiction">Fiction</option>
+        </select>
+        <select
+          className="ebooks__select"
+          name="language"
+          value={filters.language}
+          onChange={handleFilterChange}
+        >
+          <option value="">All Languages</option>
+          <option value="english">English</option>
+          <option value="russian">Russian</option>
+          <option value="japanese">Japanese</option>
         </select>
       </div>
       <ul className="ebooks__content flex">
