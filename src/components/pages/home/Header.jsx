@@ -5,7 +5,7 @@ export const Header = ({ activeTab, setActiveTab }) => {
     <header>
       <div className="header">
         <div>
-          <h1 className="header__title">{activeTab === "forYou" ? "Home" : "BookBuzz"}</h1>
+          <h1 className="header__title">BookBuzz</h1>
           <ul className="header__list">
             <li
               className={activeTab === "forYou" ? "active" : ""}

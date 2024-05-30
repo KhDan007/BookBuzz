@@ -1,6 +1,6 @@
 import { useState } from "react";
-import image1 from '../../../img/home/2.jpg';
-import star from '../../../img/icons/star.svg';
+import image1 from "../../../img/home/2.jpg";
+import star from "../../../img/icons/star.svg";
 
 export const EBooks = () => {
   const [sortBy, setSortBy] = useState("");
@@ -64,6 +64,7 @@ export const EBooks = () => {
     <div className="ebooks container">
       <div className="ebooks__filters flex">
         <select
+          className="ebooks__select"
           value={sortBy}
           onChange={(e) => handleSortChange(e.target.value)}
         >
@@ -84,12 +85,8 @@ export const EBooks = () => {
                 <span>{item.rating}</span>
               </div>
             </div>
-            <div className="ebooks__name">
-              {item.name}
-            </div>
-            <div className="ebooks__author">
-              {item.author}
-            </div>
+            <div className="ebooks__name">{item.name}</div>
+            <div className="ebooks__author">{item.author}</div>
             <div className="ebooks__price">
               {item.price === 0 ? "Free" : "$" + item.price}
             </div>

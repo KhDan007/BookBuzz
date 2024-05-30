@@ -225,7 +225,9 @@ body {
   // }
 }
 
-.recent, .arrivals, .bestsellers {
+.recent,
+.arrivals,
+.bestsellers {
   padding-bottom: 16px;
 
   &__subtitle {
@@ -354,5 +356,22 @@ body {
     bottom: 10px;
     background-color: #EFEBF1;
     border-radius: 12px;
+  }
+
+  &__select {
+    // appearance: none; /* Remove default select styling */
+    border-radius: 12px;
+    color: #4074D8;
+    font-weight: 600;
+    padding: 6px 16px 6px 24px;
+    border: 1px solid #4074D8;
+    background-color: #ffffff00;
+    font-size: 14px;
+
+  
+    &:focus {
+      outline: none;
+      border: 1px solid #4074D8;
+    }
   }
 }
