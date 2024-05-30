@@ -234,3 +234,47 @@ body {
   font-size: 14px;
   justify-content: space-between;
 }
+
+.ebooks__filters {
+  margin-bottom: 20px;
+}
+.ebooks__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.ebooks__elem {
+  cursor: pointer;
+  text-align: center;
+  flex: 0 1 47%;
+  padding: 8px 8px 16px;
+  background-color: #EFEBF1;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.ebooks__name {
+  margin-top: 8px;
+  color: #4074D8;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.ebooks__author {
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #121212;
+}
+.ebooks__price {
+  font-weight: 600;
+  color: #4074D8;
+}
+.ebooks__image {
+  position: relative;
+}
+.ebooks__rating {
+  padding: 4px 6px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  background-color: #EFEBF1;
+  border-radius: 12px;
+}
